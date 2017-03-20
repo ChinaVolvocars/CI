@@ -16,4 +16,5 @@ android:
 notifications:
   email: false
 
-script: ./gradlew build
+#script: ./gradlew build
+script: ./gradlew publishApkRelease

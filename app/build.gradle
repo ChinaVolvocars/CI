@@ -14,7 +14,16 @@ android {
         apiToken '填上fir上的apiToken'
         changeLog '更新日志'
     }
-    
+    signingConfigs {
+        release {
+//            storeFile file("The path of your keystore")
+//            storePassword keystore_pwd
+//            keyAlias key_alias
+//            keyPassword key_pwd
+//            v2SigningEnabled false
+        }
+    }
+
     defaultConfig {
         applicationId "com.meahu"
         minSdkVersion 14
@@ -27,6 +36,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 }
