@@ -1,8 +1,20 @@
 apply plugin: 'com.android.application'
 
+apply plugin: 'im.fir.plugin.gradle'
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
+
+    lintOptions {
+        abortOnError false
+    }
+
+    fir {
+        apiToken '填上fir上的apiToken'
+        changeLog '更新日志'
+    }
+    
     defaultConfig {
         applicationId "com.meahu"
         minSdkVersion 14
